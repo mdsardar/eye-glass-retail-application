@@ -1,0 +1,23 @@
+Columns of the respective tables will automatically created based on the auto DDL property set in application.yml
+
+USERS TABLE
+============
+
+INSERT INTO `users` VALUES
+(1,'sample@gmail.com','sardhu','$2a$10$5PiyN0MsG0y886d8xWXtwuLXK0Y7zZwcN5xm82b4oDSVr7yF0O6em','sardhu'),
+(2,'admin@gmail.com','admin','$2a$10$gqHrslMttQWSsDSVRTK1OehkkBiXsJ/a4z2OURU./dizwOQu5Lovu','admin');
+
+ROLES
+=====
+
+INSERT INTO `roles` VALUES (1,'ROLE_ADMIN'),(2,'ROLE_USER');
+
+USER_ROLES
+==========
+INSERT INTO `users_roles` VALUES (2,1),(1,2);
+
+INVENTORY_ITEM
+==============
+
+INSERT INTO `INVENTORY_ITEM` VALUES(2, 1, 1, 'LENS');
+
