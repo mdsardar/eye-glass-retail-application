@@ -38,11 +38,6 @@ public class SpringSecurityConfig {
         // Currently adding authorization to specific orders end points
         http.csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests((authorize) -> {
-//                authorize.requestMatchers(HttpMethod.POST, "/api/**").hasRole("ADMIN");
-//                authorize.requestMatchers(HttpMethod.PUT, "/api/**").hasRole("ADMIN");
-//                authorize.requestMatchers(HttpMethod.DELETE, "/api/**").hasRole("ADMIN");
-//                authorize.requestMatchers(HttpMethod.GET, "/api/**").hasAnyRole("ADMIN", "USER");
-//                authorize.requestMatchers(HttpMethod.PATCH, "/api/**").hasAnyRole("ADMIN", "USER");
                     authorize.requestMatchers("/api/auth/**").permitAll();
                     authorize.requestMatchers("/api/orders/**").permitAll();
                     authorize.requestMatchers(HttpMethod.OPTIONS, "/**").permitAll();
@@ -66,8 +61,8 @@ public class SpringSecurityConfig {
     //    public UserDetailsService userDetailsService(){
     //
     //        UserDetails ramesh = User.builder()
-    //                .username("ramesh")
-    //                .password(passwordEncoder().encode("password"))
+    //                .username("sardar")
+    //                .password(passwordEncoder().encode("sardhu"))
     //                .roles("USER")
     //                .build();
     //
